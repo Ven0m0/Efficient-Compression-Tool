@@ -27,6 +27,8 @@ File: enwik8, 100,000,000 bytes, compressed into gzip format
 |  ECT -9        |  34,937,781  |  3m 17.9s  |
 
 
+(These performance tests may not be accurate anymore due to optimizations)
+
 [zopfli]: https://github.com/google/zopfli
 
 ## Building
