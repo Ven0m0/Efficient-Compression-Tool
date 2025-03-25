@@ -35,7 +35,7 @@ jobs:
       run: cmake --build . --config ${{env.BUILD_TYPE}} -j 2
 
 #disable artifacts for now, compile and package proper cross-platform, cross-architecture binaries later
-    - uses: actions/upload-artifact@v3
-      with:
-        name: ect-win-x86-64
-        path: src\build\ect.exe
+#    - uses: actions/upload-artifact@v3
+#      with:
+#        name: ect-win-x86-64
+#        path: src\build\ect.exe
