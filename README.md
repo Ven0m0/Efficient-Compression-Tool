@@ -4,6 +4,10 @@ Efficient Compression Tool
 Efficient Compression Tool (or ECT) is a C++ file optimizer.  
 It supports PNG, JPEG, GZIP and ZIP files.
 
+Changes in my fork
+-------------------------
+Added additional compiler optimizations
+
 Performance (v0.9.2)
 -------------------------
 All tests were run on macOS 12.5 using an Intel i7-7700HQ and clang.  
