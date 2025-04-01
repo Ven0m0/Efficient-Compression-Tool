@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4.2.2
       with:
         submodules: 'true'
 
@@ -35,13 +35,20 @@ jobs:
     - name: build
       working-directory: src\build
       run: cmake --build . --config ${{env.BUILD_TYPE}} -j 2
-
+    - name: Upload
+      uses: actions/upload-artifact@v4.6.2
+        with:
+        name: ECT
+        path: artifacts/build\ect.exe
 #disable artifacts for now, compile and package proper cross-platform, cross-architecture binaries later
 #    - uses: actions/upload-artifact@v3
 #      with:
 #        name: ect-win-x86-64
 #        path: src\build\ect.exe
-    - uses: googleapis/release-please-action@v4
-      with:
-          token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-          release-type: simple
+    - name: Upload artifacts
+        uses: alexellis/upload-assets@0.4.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          asset_paths: '["./**/*.exe"]'
+
