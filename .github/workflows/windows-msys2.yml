@@ -38,8 +38,8 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v4.6.2
         with:
-        name: ECT
-        path: artifacts/build\ect.exe
+          name: ECT
+          path: artifacts/build\ect.exe
 #disable artifacts for now, compile and package proper cross-platform, cross-architecture binaries later
 #    - uses: actions/upload-artifact@v3
 #      with:
