@@ -45,10 +45,3 @@ jobs:
 #      with:
 #        name: ect-win-x86-64
 #        path: src\build\ect.exe
-    - name: Upload artifacts
-        uses: alexellis/upload-assets@0.4.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          asset_paths: '["./**/*.exe"]'
-
